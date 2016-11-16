@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Registracija/Registracija.unity
+- path: Assets/CPP/CPP.unity
   isLoaded: 1
   isActive: 1

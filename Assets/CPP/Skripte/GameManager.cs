@@ -21,6 +21,12 @@ public class GameManager : MonoBehaviour {
 
 	private Question currentQuestion;
 
+	public Button AnmButton1;
+	public Color AnmColorRed;
+	public Button AnmButton2;
+	public Color AnmColorGreen;
+	public Button AnmButton3;
+
 	[SerializeField]
 	private Text questionText;
 
@@ -66,14 +72,23 @@ public class GameManager : MonoBehaviour {
 		odgovor2.text = currentQuestion.odg2;
 		odgovor3.text = currentQuestion.odg3;
 		if(currentQuestion.odg1==currentQuestion.pravilniOdg){
+			AnmButton1.image.color = Color.green;
+			AnmButton2.image.color = Color.red;
+			AnmButton3.image.color = Color.red;
 			AnmOdg1Text.text="PRAVILNO";
 			AnmOdg2Text.text="NAPAČNO";
 			AnmOdg3Text.text="NAPAČNO";
 		}else if(currentQuestion.odg2==currentQuestion.pravilniOdg){
+			AnmButton1.image.color = Color.red;
+			AnmButton2.image.color = Color.green;
+			AnmButton3.image.color = Color.red;
 			AnmOdg1Text.text="NAPAČNO";
 			AnmOdg2Text.text="PRAVILNO";
 			AnmOdg3Text.text="NAPAČNO";
 		}else if(currentQuestion.odg3==currentQuestion.pravilniOdg){
+			AnmButton1.image.color = Color.red;
+			AnmButton2.image.color = Color.red;
+			AnmButton3.image.color = Color.green;
 			AnmOdg1Text.text="NAPAČNO";
 			AnmOdg2Text.text="NAPAČNO";
 			AnmOdg3Text.text="PRAVILNO";
@@ -89,29 +104,14 @@ public class GameManager : MonoBehaviour {
 	}
 	public void UserSelectAnswer1(){
 		animator.SetTrigger ("Odg1");
-		if (currentQuestion.pravilniOdg == odgovor1.text) {
-			Debug.Log  (currentQuestion.question + " PRAV JE"); //izpis v konzoli
-		} else {
-			Debug.Log (currentQuestion.question + " Narobe JE"); //izpis v konzoli
-		}
 		StartCoroutine (TransitionToNextQuestion ());
 	}
 	public void UserSelectAnswer2(){
 		animator.SetTrigger ("Odg2");
-		if (currentQuestion.pravilniOdg == odgovor2.text) {
-			Debug.Log (currentQuestion.question + " PRAV JE"); //izpis v konzoli
-		} else {
-			Debug.Log (currentQuestion.question + " Narobe JE"); //izpis v konzoli
-		}
 		StartCoroutine (TransitionToNextQuestion ());
 	}
 	public void UserSelectAnswer3(){
 		animator.SetTrigger ("Odg3");
-		if (currentQuestion.pravilniOdg == odgovor3.text) {
-			Debug.Log (currentQuestion.question + " PRAV JE"); //izpis v konzoli
-		} else {
-			Debug.Log (currentQuestion.question + " Narobe JE"); //izpis v konzoli
-		}
 		StartCoroutine (TransitionToNextQuestion ());
 	}
 }
