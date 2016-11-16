@@ -15,6 +15,7 @@ public class HSController : MonoBehaviour
 	public Text neujemanje1;
 	public Text neujemanje2;
 	public Text prekratko;
+	public Text email_obstaja;
 
 
 	public void poslji(){
@@ -23,6 +24,7 @@ public class HSController : MonoBehaviour
 		neujemanje2.enabled = false;
 		prekratko.enabled = false;
 		bool napaka = false;
+		email_obstaja.enabled = false;
 		string k = null;
 		if (kat.value == 0) {
 			k = "B";
@@ -36,7 +38,7 @@ public class HSController : MonoBehaviour
 
 		int dolzinaGesla = geslo.text.Length;
 
-		if (mail.text == "" || mail.text.Length<5) {
+		if (mail.text == "" || mail.text.Length<5 || mail.text.Contains("@") != true || mail.text.Contains(".") != true) {
 			email.enabled = true;
 			napaka = true;
 		}
@@ -65,24 +67,38 @@ public class HSController : MonoBehaviour
 		// Supply it with a string representing the players name and the players score.
 		//string hash = MD5Test.Md5Sum(name + score + secretKey);
 		//string kat="B";
-		string ui="KlemenKac";
+		string ui = "KlemenKac";
 		//string geslo = "kac3";
 		//string email = "xklemenx@gmail.com";
 		string datum = "10.11.2016";
 		string addScoreURL = "http://31.15.251.14/sola_voznje/registration.php?";
 		string post_url = addScoreURL + "kat=" + kat + "&ui=" + ui + "&geslo=" + geslo + "&email=" + email + "&datum=" + datum;
-		string izpisi = addScoreURL + "kat=" + kat + "&ui=" + ui + "&geslo=" + geslo + "&email=" + email + "&datum=" + datum;
-		print (izpisi);
+
+		//string izpisi = addScoreURL + "kat=" + kat + "&ui=" + ui + "&geslo=" + geslo + "&email=" + email + "&datum=" + datum;
+		//print (izpisi);
 		// Post the URL to the site and create a download object to get the result.
-		WWW hs_post = new WWW(post_url);
-		yield return hs_post; // Wait until the download is done
 
-		if (hs_post.error != null) {
-			print ("Napaka v pošiljanju podatkov: " + hs_post.error);
+		string highscoreURL = "http://31.15.251.14/sola_voznje/check_email.php?" + "email=" + email;
+		WWW hs_get = new WWW (highscoreURL);
+		yield return hs_get;
+
+		if (hs_get.error != null) {
+			print ("Napaka pri preverjanju emaila: " + hs_get.error);
+		} else if (hs_get.text != "Neobstaja!") {
+			//Debug.Log ("EMAIL ZE OBSTAJA");
+			email_obstaja.enabled = true;
 		} else {
-			SceneManager.LoadScene("Menu");
+			
+			WWW hs_post = new WWW (post_url);
+			yield return hs_post; // Wait until the download is done
+
+			if (hs_post.error != null) {
+				print ("Napaka v pošiljanju podatkov: " + hs_post.error);
+			} else {
+				//Debug.Log ("POSLANO!");
+				SceneManager.LoadScene ("Menu");
+			}
 		}
+
 	}
-
-
 }
