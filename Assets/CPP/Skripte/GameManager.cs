@@ -34,6 +34,18 @@ public class GameManager : MonoBehaviour {
 	private Text odgovor3;
 
 	[SerializeField]
+	private Text AnmOdg1Text;
+
+	[SerializeField]
+	private Text AnmOdg2Text;
+
+	[SerializeField]
+	private Text AnmOdg3Text;
+
+	[SerializeField]
+	private Animator animator;
+
+	[SerializeField]
 	private float timeBetweenQuestions = 1f;//1 second delay
 
 	void Start(){
@@ -53,7 +65,19 @@ public class GameManager : MonoBehaviour {
 		odgovor1.text = currentQuestion.odg1;
 		odgovor2.text = currentQuestion.odg2;
 		odgovor3.text = currentQuestion.odg3;
-
+		if(currentQuestion.odg1==currentQuestion.pravilniOdg){
+			AnmOdg1Text.text="PRAVILNO";
+			AnmOdg2Text.text="NAPAČNO";
+			AnmOdg3Text.text="NAPAČNO";
+		}else if(currentQuestion.odg2==currentQuestion.pravilniOdg){
+			AnmOdg1Text.text="NAPAČNO";
+			AnmOdg2Text.text="PRAVILNO";
+			AnmOdg3Text.text="NAPAČNO";
+		}else if(currentQuestion.odg3==currentQuestion.pravilniOdg){
+			AnmOdg1Text.text="NAPAČNO";
+			AnmOdg2Text.text="NAPAČNO";
+			AnmOdg3Text.text="PRAVILNO";
+		}
 	}
 
 	IEnumerator TransitionToNextQuestion(){
@@ -64,14 +88,16 @@ public class GameManager : MonoBehaviour {
 		SceneManager.LoadScene (SceneManager.GetActiveScene().buildIndex);
 	}
 	public void UserSelectAnswer1(){
+		animator.SetTrigger ("Odg1");
 		if (currentQuestion.pravilniOdg == odgovor1.text) {
-			Debug.Log (currentQuestion.question + " PRAV JE"); //izpis v konzoli
+			Debug.Log  (currentQuestion.question + " PRAV JE"); //izpis v konzoli
 		} else {
 			Debug.Log (currentQuestion.question + " Narobe JE"); //izpis v konzoli
 		}
 		StartCoroutine (TransitionToNextQuestion ());
 	}
 	public void UserSelectAnswer2(){
+		animator.SetTrigger ("Odg2");
 		if (currentQuestion.pravilniOdg == odgovor2.text) {
 			Debug.Log (currentQuestion.question + " PRAV JE"); //izpis v konzoli
 		} else {
@@ -80,6 +106,7 @@ public class GameManager : MonoBehaviour {
 		StartCoroutine (TransitionToNextQuestion ());
 	}
 	public void UserSelectAnswer3(){
+		animator.SetTrigger ("Odg3");
 		if (currentQuestion.pravilniOdg == odgovor3.text) {
 			Debug.Log (currentQuestion.question + " PRAV JE"); //izpis v konzoli
 		} else {

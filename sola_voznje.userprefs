@@ -2,9 +2,13 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Registracija\Skripte\HSController.cs">
     <Files>
+<<<<<<< Updated upstream
       <File FileName="Assets\CPP\Skripte\GameManager.cs" Line="1" Column="1" />
       <File FileName="Assets\Menu\Skripte\Menu_script.cs" Line="1" Column="1" />
       <File FileName="Assets\Registracija\Skripte\HSController.cs" Line="77" Column="5" />
+=======
+      <File FileName="Assets/CPP/Skripte/GameManager.cs" Line="94" Column="11" />
+>>>>>>> Stashed changes
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
