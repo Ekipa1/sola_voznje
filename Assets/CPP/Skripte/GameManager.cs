@@ -140,9 +140,10 @@ public class GameManager : MonoBehaviour {
 		//This connects to a server side php script that will add the name and score to a MySQL DB.
 		// Supply it with a string representing the players name and the players score.
 		//string hash = MD5Test.Md5Sum(name + score + secretKey);
-		string email = "colic@gmail.com";
+		//string email = "colic@gmail.com";
+		read();
 		string getScoreURL = "http://31.15.251.14/sola_voznje/get_score.php?";
-		string post_url = getScoreURL + "email=" + email;;
+		string post_url = getScoreURL + "email=" + user;
 
 		var hs_post = new WWW (post_url);
 		yield return hs_post; // Wait until the download is done
@@ -162,9 +163,10 @@ public class GameManager : MonoBehaviour {
 		//This connects to a server side php script that will add the name and score to a MySQL DB.
 		// Supply it with a string representing the players name and the players score.
 		//string hash = MD5Test.Md5Sum(name + score + secretKey);
-		string email = "colic@gmail.com";
+		read();
+		//string email = "colic@gmail.com";
 		string setScoreURL = "http://31.15.251.14/sola_voznje/set_score.php?";
-		string post_url = setScoreURL + "email=" + email;
+		string post_url = setScoreURL + "email=" + user;
 
 		var hs_post = new WWW (post_url);
 		yield return hs_post; // Wait until the download is done
@@ -185,10 +187,11 @@ public class GameManager : MonoBehaviour {
 		//This connects to a server side php script that will add the name and score to a MySQL DB.
 		// Supply it with a string representing the players name and the players score.
 		//string hash = MD5Test.Md5Sum(name + score + secretKey);
+		read();
 		string kviz="CPP";
-		string email = "colic@gmail.com";
+		//string user = "colic@gmail.com";
 		string dobiVprasanje = "http://31.15.251.14/sola_voznje/question.php?";
-		string post_url = dobiVprasanje + "kviz=" + kviz + "&email=" + email;
+		string post_url = dobiVprasanje + "kviz=" + kviz + "&email=" + user;
 		string data;
 		var hs_post = new WWW (post_url);
 		yield return hs_post; // Wait until the download is done
@@ -266,6 +269,20 @@ public class GameManager : MonoBehaviour {
 			//SceneManager.LoadScene ("Menu");
 		}
 
+	}
+	void read(){
+		//How to read a text file.
+		//try...catch is to deal with a 0 byte file.
+		StreamReader reader = new StreamReader("data.txt");
+		try {
+			do {
+				user=reader.ReadLine();
+			}
+			while (reader.Peek() != -1);
+		}
+		catch {
+		}
+		reader.Close ();
 	}
 
 

@@ -99,7 +99,7 @@ public class HSController : MonoBehaviour
 				print ("Napaka v pošiljanju podatkov: " + hs_post.error);
 			} else {
 				//Debug.Log ("POSLANO!");
-				SceneManager.LoadScene ("Menu");
+				SceneManager.LoadScene ("Login");
 			}
 		}
 
