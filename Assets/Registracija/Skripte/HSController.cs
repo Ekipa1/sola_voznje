@@ -17,6 +17,9 @@ public class HSController : MonoBehaviour
 	public Text prekratko;
 	public Text email_obstaja;
 
+	public void naloziLog(){
+		SceneManager.LoadScene ("Login");
+	}
 
 	public void poslji(){
 		email.enabled = false;

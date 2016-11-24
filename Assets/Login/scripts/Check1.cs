@@ -2,6 +2,7 @@
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using System.Collections;
+using System.IO;
 
 public class Check1 : MonoBehaviour {
 
@@ -10,6 +11,7 @@ public class Check1 : MonoBehaviour {
     public Text email_obstaja;
     public Text email;
     public Text neujemanje1;
+
 
     public void poslji()
     {
@@ -39,9 +41,20 @@ public class Check1 : MonoBehaviour {
         }
         else
         {
-            SceneManager.LoadScene("Menu");
+			write ();
+            SceneManager.LoadScene("Start");
         
         }
 
     }
+	void write(){
+		//Demonstrates how to create and write to a text file.
+		StreamWriter writer = new StreamWriter("data.txt");
+		writer.WriteLine(mail.text);
+		writer.Close();
+	}
+
+	public void naloziReg(){
+		SceneManager.LoadScene("Registracija");
+	}
 }
