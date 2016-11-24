@@ -70,8 +70,13 @@ public class GameManager : MonoBehaviour {
 			unansweredQuestions = questions.ToList<Question>();
 		}*/
 		//SetCurrentQuestion ();
-		StartCoroutine (getScore ());
-		StartCoroutine (newQuestion ());
+		if (GlobalVariables.stVprasanjaCPP < 1) {
+			StartCoroutine (getScore ());
+			StartCoroutine (newQuestion ());
+		} else {
+			GlobalVariables.opravilCPP = true;
+			SceneManager.LoadScene ("Menu");
+		}
 		//Debug.Log (currentQuestion.question + " is " + currentQuestion.isTrue); //izpis v konzoli
 	}
 	void SetCurrentQuestion(){
@@ -184,6 +189,7 @@ public class GameManager : MonoBehaviour {
 	//baza
 	IEnumerator newQuestion()
 	{
+		GlobalVariables.stVprasanjaCPP++;
 		//This connects to a server side php script that will add the name and score to a MySQL DB.
 		// Supply it with a string representing the players name and the players score.
 		//string hash = MD5Test.Md5Sum(name + score + secretKey);

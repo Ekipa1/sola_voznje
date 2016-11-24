@@ -49,6 +49,7 @@
      <Compile Include="Assets\CPP\Skripte\Question.cs" />
      <Compile Include="Assets\CPP\Skripte\Score.cs" />
      <Compile Include="Assets\Login\scripts\Check1.cs" />
+     <Compile Include="Assets\Menu\Skripte\GlobalVariables.cs" />
      <Compile Include="Assets\Menu\Skripte\Menu_script.cs" />
      <Compile Include="Assets\Rdeci_kriz\skripte\Question_.cs" />
      <Compile Include="Assets\Rdeci_kriz\skripte\quiz_pp.cs" />

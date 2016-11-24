@@ -1,14 +1,15 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Rdeci_kriz/skripte/quiz_pp.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Menu/Skripte/Menu_script.cs">
     <Files>
-      <File FileName="Assets/Rdeci_kriz/skripte/quiz_pp.cs" Line="41" Column="25" />
-      <File FileName="Assets/Menu/Skripte/Menu_script.cs" Line="16" Column="33" />
-      <File FileName="Assets/CPP/Skripte/GameManager.cs" Line="43" Column="1" />
-      <File FileName="Assets/Registracija/Skripte/HSController.cs" Line="1" Column="1" />
+      <File FileName="Assets/Menu/Skripte/Menu_script.cs" Line="31" Column="43" />
+      <File FileName="Assets/Start/Skripte/start_check.cs" Line="40" Column="4" />
+      <File FileName="Assets/Rdeci_kriz/skripte/quiz_pp.cs" Line="77" Column="33" />
+      <File FileName="Assets/CPP/Skripte/GameManager.cs" Line="77" Column="30" />
+      <File FileName="Assets/Registracija/Skripte/HSController.cs" Line="102" Column="35" />
       <File FileName="Assets/CPP/Skripte/Question.cs" Line="1" Column="1" />
-      <File FileName="Assets/Login/scripts/Check1.cs" Line="45" Column="42" />
-      <File FileName="Assets/Start/Skripte/start_check.cs" Line="26" Column="1" />
+      <File FileName="Assets/Login/scripts/Check1.cs" Line="1" Column="1" />
+      <File FileName="Assets/Menu/Skripte/GlobalVariables.cs" Line="5" Column="34" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

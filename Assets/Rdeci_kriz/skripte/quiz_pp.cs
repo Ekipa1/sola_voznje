@@ -73,8 +73,13 @@ public class quiz_pp : MonoBehaviour {
         SetCurrentAnswer();
         SetCurrentAnswer2();
         SetCurrentAnswer3();*/
-		StartCoroutine (getScore ());
-		StartCoroutine (newQuestion ());
+		if (GlobalVariables.stVprasanjaPP < 1) {
+			StartCoroutine (getScore ());
+			StartCoroutine (newQuestion ());
+		} else {
+			GlobalVariables.opravilPP = true;
+			SceneManager.LoadScene ("Menu");
+		}
 
     }
 
@@ -277,6 +282,7 @@ public class quiz_pp : MonoBehaviour {
 	//baza
 	IEnumerator newQuestion()
 	{
+		GlobalVariables.stVprasanjaPP++;
 		//This connects to a server side php script that will add the name and score to a MySQL DB.
 		// Supply it with a string representing the players name and the players score.
 		//string hash = MD5Test.Md5Sum(name + score + secretKey);
