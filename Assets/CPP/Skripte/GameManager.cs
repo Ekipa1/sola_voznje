@@ -70,7 +70,7 @@ public class GameManager : MonoBehaviour {
 			unansweredQuestions = questions.ToList<Question>();
 		}*/
 		//SetCurrentQuestion ();
-		if (GlobalVariables.stVprasanjaCPP < 1) {
+		if (GlobalVariables.stVprasanjaCPP < 2) {
 			StartCoroutine (getScore ());
 			StartCoroutine (newQuestion ());
 		} else {
