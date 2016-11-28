@@ -1,5 +1,11 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;// za list
+using System.Linq;//za unansweredQuestions = questions.ToList<Question>();
+using UnityEngine.UI;// za text
+using UnityEngine.SceneManagement;//
+using System.IO;
+using UnityEngine.EventSystems;
 
 public class CarMovement : MonoBehaviour {
 
@@ -15,7 +21,16 @@ public class CarMovement : MonoBehaviour {
     //object position
     Vector3 myPos;
     float angle;
-    
+    public GameObject avto;
+    public Button gumb;
+    bool gre_naprej = false;
+    PointerEventData d;
+
+    public bool isForwardPressed = false;
+    public bool isBackPressed = false;
+    public bool isLeftPressed = false;
+    public bool isRightPressed = false;
+
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -28,30 +43,58 @@ public class CarMovement : MonoBehaviour {
         myPos = myTrans.position;
         myRot = myTrans.rotation.eulerAngles;*/
     }
-	
-	// Update is called once per frame
-	void Update () {
+
+    // Update is called once per frame
+    void Update() {
+
+
+        if (isForwardPressed)
+        {
+            Naprej();
+        } else if (isBackPressed)
+        {
+            Nazaj();
+        }
+        if (isLeftPressed)
+        {
+            Levo_zavoj();
+        } else if(isRightPressed)
+        {
+            Desno_zavoj();
+        }
+
+
+       /* if (Input.GetKey(KeyCode.UpArrow))
+        {
+            Naprej();
+        }
+        
+        if (Input.GetKey(KeyCode.DownArrow))
+        {
+            Nazaj();
+        }
 
         //angle = myTrans.eulerAngles.magnitude * Mathf.Deg2Rad;
-       
+        if (Input.GetKey(KeyCode.RightArrow))
+        {
+            Desno_zavoj();
+        }
+    
 
         if (Input.GetKey(KeyCode.LeftArrow))
          {
-           // transform.position += transform.forward * Time.deltaTime * 90.0f;
-           rb.velocity = new Vector2(-carspeed, 0);
-            Naprej();
-            Nazaj();
             Levo_zavoj();
-            Desno_zavoj();
-            // transform.position += transform.forward * Time.deltaTime * carspeed;
-            //myPos.x += Mathf.Cos(angle) * carspeed* Time.deltaTime;
-            // myPos.y += Mathf.Sin(angle) * carspeed * Time.deltaTime;
-            // position.y += Input.GetAxis("Horizontal") * carspeed * Time.deltaTime;
+           // transform.position += transform.forward * Time.deltaTime * 90.0f;
+           // rb.velocity = new Vector2(-carspeed, 0);
+           // transform.position += transform.forward * Time.deltaTime * carspeed;
+           //myPos.x += Mathf.Cos(angle) * carspeed* Time.deltaTime;
+           // myPos.y += Mathf.Sin(angle) * carspeed * Time.deltaTime;
+           // position.y += Input.GetAxis("Horizontal") * carspeed * Time.deltaTime;
         }
          else
         {
            
-        }
+        }*/
         //transform.position = position;
     }
 
@@ -128,7 +171,54 @@ public class CarMovement : MonoBehaviour {
         rb.velocity = Vector2.zero;
     }
 
-    public void crash()
+   
+        void OnCollisionEnter2D(Collision2D Collection)
     {
+
+
+            Debug.Log("FEF");
+            if (Collection.gameObject.name == "prvi_avto")
+            {
+                Debug.Log("CRASH!!!");
+                Destroy(avto);
+             
+            }
     }
+
+    public void onPointerDownForward()
+    {
+        isForwardPressed = true;
+    }
+    public void onPointerUpForward()
+    {
+        isForwardPressed = false;
+    }
+
+    public void onPointerDownBack()
+    {
+        isBackPressed = true;
+    }
+    public void onPointerUpBack()
+    {
+        isBackPressed = false;
+    }
+
+    public void onPointerDownLeft()
+    {
+        isLeftPressed = true;
+    }
+    public void onPointerUpLeft()
+    {
+        isLeftPressed = false;
+    }
+
+    public void onPointerDownRight()
+    {
+        isRightPressed = true;
+    }
+    public void onPointerUpRight()
+    {
+        isRightPressed = false;
+    }
+
 }

@@ -78,6 +78,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Button_naprej.cs" />
     <Compile Include="Assets\CPP\Skripte\GameManager.cs" />
     <Compile Include="Assets\CPP\Skripte\Question.cs" />
     <Compile Include="Assets\CPP\Skripte\Score.cs" />

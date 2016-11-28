@@ -195,7 +195,7 @@ public class quiz_pp : MonoBehaviour {
             Debug.Log("WRONG!");
         }*/
 
-        //StartCoroutine(TransitionTonextQuestion());
+        StartCoroutine(TransitionTonextQuestion());
     }
 
     public void pravilni3()
