@@ -172,18 +172,6 @@ public class CarMovement : MonoBehaviour {
     }
 
    
-        void OnCollisionEnter2D(Collision2D Collection)
-    {
-
-
-            Debug.Log("FEF");
-            if (Collection.gameObject.name == "prvi_avto")
-            {
-                Debug.Log("CRASH!!!");
-                Destroy(avto);
-             
-            }
-    }
 
     public void onPointerDownForward()
     {
