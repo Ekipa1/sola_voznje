@@ -1,23 +1,9 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Menu/Skripte/Menu_script.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/level1/scripts/CarMovement.cs">
     <Files>
-<<<<<<< HEAD
-      <File FileName="Assets/Rdeci_kriz/skripte/quiz_pp.cs" Line="296" Column="25" />
-      <File FileName="Assets/Menu/Skripte/Menu_script.cs" Line="7" Column="17" />
-      <File FileName="Assets/CPP/Skripte/GameManager.cs" Line="106" Column="14" />
-      <File FileName="Assets/Start/Skripte/start_check.cs" Line="1" Column="1" />
-      <File FileName="Assets/Registracija/Skripte/HSController.cs" Line="1" Column="1" />
-=======
-      <File FileName="Assets/Menu/Skripte/Menu_script.cs" Line="31" Column="43" />
-      <File FileName="Assets/Start/Skripte/start_check.cs" Line="40" Column="4" />
-      <File FileName="Assets/Rdeci_kriz/skripte/quiz_pp.cs" Line="77" Column="33" />
-      <File FileName="Assets/CPP/Skripte/GameManager.cs" Line="77" Column="30" />
-      <File FileName="Assets/Registracija/Skripte/HSController.cs" Line="102" Column="35" />
->>>>>>> origin/master
-      <File FileName="Assets/CPP/Skripte/Question.cs" Line="1" Column="1" />
-      <File FileName="Assets/Login/scripts/Check1.cs" Line="1" Column="1" />
-      <File FileName="Assets/Menu/Skripte/GlobalVariables.cs" Line="5" Column="34" />
+      <File FileName="Assets/Menu/Skripte/Menu_script.cs" Line="13" Column="14" />
+      <File FileName="Assets/level1/scripts/CarMovement.cs" Line="21" Column="22" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
