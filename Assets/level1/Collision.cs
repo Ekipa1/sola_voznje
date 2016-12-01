@@ -19,7 +19,8 @@ public class Collision : MonoBehaviour {
         if (Collection.gameObject.name == "prvi_avto")
         {
             avto.transform.position = new Vector3(-172, 472, 0);
-            avto.transform.Rotate(0, 0, -90);
+            avto.transform.localEulerAngles = new Vector3(0,0,0);
+            //avto.transform.Rotate(0, 0, -90.2);
             //transform.position = new Vector3(n, transform.position.y, transform.position.z);
         }
     }
