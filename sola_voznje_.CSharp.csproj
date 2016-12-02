@@ -82,6 +82,7 @@
     <Compile Include="Assets\CPP\Skripte\GameManager.cs" />
     <Compile Include="Assets\CPP\Skripte\Question.cs" />
     <Compile Include="Assets\CPP\Skripte\Score.cs" />
+    <Compile Include="Assets\Cestitamo\changeScene.cs" />
     <Compile Include="Assets\Login\scripts\Check1.cs" />
     <Compile Include="Assets\Menu\Skripte\GlobalVariables.cs" />
     <Compile Include="Assets\Menu\Skripte\Menu_script.cs" />
@@ -89,11 +90,17 @@
     <Compile Include="Assets\Rdeci_kriz\skripte\quiz_pp.cs" />
     <Compile Include="Assets\Registracija\Skripte\HSController.cs" />
     <Compile Include="Assets\Start\Skripte\start_check.cs" />
+    <Compile Include="Assets\level1\Collision.cs" />
     <Compile Include="Assets\level1\button_ena.cs" />
     <Compile Include="Assets\level1\scripts\Car.cs" />
     <Compile Include="Assets\level1\scripts\CarMovement.cs" />
+    <Compile Include="Assets\level1\scripts\CarParkedCheck.cs" />
     <Compile Include="Assets\level1\scripts\Left_move.cs" />
     <Compile Include="Assets\level1\scripts\Right_move.cs" />
+    <Compile Include="Assets\level2\Skripte\CarParkedCheckLvl2.cs" />
+    <Compile Include="Assets\level2\Skripte\CollisionLvl2.cs" />
+    <Compile Include="Assets\level3\carparkedchechek3rdlevel\carparkchecked3.cs" />
+    <Compile Include="Assets\level3\collisionlvl3\colisionlevel3.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
