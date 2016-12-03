@@ -64,6 +64,12 @@
     <Reference Include="UnityEditor">
       <HintPath>Library\UnityAssemblies\UnityEditor.dll</HintPath>
     </Reference>
+    <Reference Include="UnityEditor.iOS.Extensions.Xcode">
+      <HintPath>Library\UnityAssemblies\UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.iOS.Extensions.Common">
+      <HintPath>Library\UnityAssemblies\UnityEditor.iOS.Extensions.Common.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="sola_voznje.CSharp.Plugins.csproj">
@@ -80,6 +86,7 @@
     <Compile Include="Assets\Login\scripts\Check1.cs" />
     <Compile Include="Assets\Menu\Skripte\GlobalVariables.cs" />
     <Compile Include="Assets\Menu\Skripte\Menu_script.cs" />
+    <Compile Include="Assets\Poskusi znova\Poskusi_script.cs" />
     <Compile Include="Assets\Rdeci_kriz\skripte\Question_.cs" />
     <Compile Include="Assets\Rdeci_kriz\skripte\quiz_pp.cs" />
     <Compile Include="Assets\Registracija\Skripte\HSController.cs" />
@@ -91,6 +98,15 @@
     <Compile Include="Assets\level1\scripts\CarParkedCheck.cs" />
     <Compile Include="Assets\level1\scripts\Left_move.cs" />
     <Compile Include="Assets\level1\scripts\Right_move.cs" />
+    <Compile Include="Assets\level2\Skripte\CarParkedCheckLvl2.cs" />
+    <Compile Include="Assets\level2\Skripte\CollisionLvl2.cs" />
+    <Compile Include="Assets\level3\carparkedchechek3rdlevel\carparkchecked3.cs" />
+    <Compile Include="Assets\level3\collisionlvl3\colisionlevel3.cs" />
+    <Compile Include="Assets\level4\Scripts\Collision.cs" />
+    <Compile Include="Assets\level4\Scripts\Desni_avto_premik.cs" />
+    <Compile Include="Assets\level4\Scripts\Levi_avto_premik.cs" />
+    <Compile Include="Assets\level4\Scripts\Naredil.cs" />
+    <Compile Include="Assets\level4\Scripts\SkrijNapis.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
