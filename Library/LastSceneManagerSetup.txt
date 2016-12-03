@@ -1,4 +1,4 @@
 sceneSetups:
-- path: C:/Users/zako10/Documents/sola_voznje_/level3/level3.unity
+- path: Assets/level3/level3.unity
   isLoaded: 1
   isActive: 1
