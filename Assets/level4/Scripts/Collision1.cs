@@ -2,7 +2,7 @@
 using System.Collections;
 using UnityEngine.SceneManagement;
 
-public class Collision : MonoBehaviour
+public class Collision1 : MonoBehaviour
 {
 
 
