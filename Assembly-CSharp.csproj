@@ -53,6 +53,7 @@
      <Compile Include="Assets\Login\scripts\Check1.cs" />
      <Compile Include="Assets\Menu\Skripte\GlobalVariables.cs" />
      <Compile Include="Assets\Menu\Skripte\Menu_script.cs" />
+     <Compile Include="Assets\Poskusi znova\Poskusi_script.cs" />
      <Compile Include="Assets\Rdeci_kriz\skripte\Question_.cs" />
      <Compile Include="Assets\Rdeci_kriz\skripte\quiz_pp.cs" />
      <Compile Include="Assets\Registracija\Skripte\HSController.cs" />
@@ -66,6 +67,13 @@
      <Compile Include="Assets\level1\scripts\Right_move.cs" />
      <Compile Include="Assets\level2\Skripte\CarParkedCheckLvl2.cs" />
      <Compile Include="Assets\level2\Skripte\CollisionLvl2.cs" />
+     <Compile Include="Assets\level3\carparkedchechek3rdlevel\carparkchecked3.cs" />
+     <Compile Include="Assets\level3\collisionlvl3\colisionlevel3.cs" />
+     <Compile Include="Assets\level4\Scripts\Collision.cs" />
+     <Compile Include="Assets\level4\Scripts\Desni_avto_premik.cs" />
+     <Compile Include="Assets\level4\Scripts\Levi_avto_premik.cs" />
+     <Compile Include="Assets\level4\Scripts\Naredil.cs" />
+     <Compile Include="Assets\level4\Scripts\SkrijNapis.cs" />
      <None Include="Assets\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
  <Reference Include="UnityEngine.Networking">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
