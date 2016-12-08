@@ -33,7 +33,7 @@ public class CarParkedCheckLvl2 : MonoBehaviour {
         //This is a coroutine
         // SceneManager.LoadScene("Cestitamo");
 
-        yield return new WaitForSeconds(1);
+		yield return new WaitForSeconds(1);
         SceneManager.LoadScene("Cestitamo");
         //DoSomethingElse();
     }

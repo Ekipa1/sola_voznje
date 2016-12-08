@@ -69,7 +69,7 @@
      <Compile Include="Assets\level2\Skripte\CollisionLvl2.cs" />
      <Compile Include="Assets\level3\carparkedchechek3rdlevel\carparkchecked3.cs" />
      <Compile Include="Assets\level3\collisionlvl3\colisionlevel3.cs" />
-     <Compile Include="Assets\level4\Scripts\Collision.cs" />
+     <Compile Include="Assets\level4\Scripts\Collision1.cs" />
      <Compile Include="Assets\level4\Scripts\Desni_avto_premik.cs" />
      <Compile Include="Assets\level4\Scripts\Levi_avto_premik.cs" />
      <Compile Include="Assets\level4\Scripts\Naredil.cs" />
