@@ -80,6 +80,13 @@
     <Compile Include="Assets\Login\scripts\Check1.cs" />
     <Compile Include="Assets\Menu\Skripte\GlobalVariables.cs" />
     <Compile Include="Assets\Menu\Skripte\Menu_script.cs" />
+    <Compile Include="Assets\Minigame1\Scripts\Avto_premik.cs" />
+    <Compile Include="Assets\Minigame1\Scripts\Premikaj_nasproti.cs" />
+    <Compile Include="Assets\Minigame1\Scripts\Premikaj_ozadje.cs" />
+    <Compile Include="Assets\Minigame1\Scripts\PrikazSekund.cs" />
+    <Compile Include="Assets\Minigame1\Scripts\Sekunde.cs" />
+    <Compile Include="Assets\Minigame1\Scripts\SkrijNavodila.cs" />
+    <Compile Include="Assets\Minigame1\Scripts\SpawnScript.cs" />
     <Compile Include="Assets\Poskusi znova\Poskusi_script.cs" />
     <Compile Include="Assets\Rdeci_kriz\skripte\Question_.cs" />
     <Compile Include="Assets\Rdeci_kriz\skripte\quiz_pp.cs" />

@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/3dVoznja/Scenes/TestScene.unity
+- path: Assets/Minigame1/Minigame1.unity
   isLoaded: 1
   isActive: 1
