@@ -86,6 +86,14 @@
     <Compile Include="Assets\Login\scripts\Check1.cs" />
     <Compile Include="Assets\Menu\Skripte\GlobalVariables.cs" />
     <Compile Include="Assets\Menu\Skripte\Menu_script.cs" />
+    <Compile Include="Assets\Minigame1\Scripts\Avto_premik.cs" />
+    <Compile Include="Assets\Minigame1\Scripts\Premikaj_nasproti.cs" />
+    <Compile Include="Assets\Minigame1\Scripts\Premikaj_ozadje.cs" />
+    <Compile Include="Assets\Minigame1\Scripts\PrikazSekund.cs" />
+    <Compile Include="Assets\Minigame1\Scripts\Sekunde.cs" />
+    <Compile Include="Assets\Minigame1\Scripts\SkrijNavodila.cs" />
+    <Compile Include="Assets\Minigame1\Scripts\SpawnScript.cs" />
+    <Compile Include="Assets\Poskusi znova\Poskusi_script.cs" />
     <Compile Include="Assets\Rdeci_kriz\skripte\Question_.cs" />
     <Compile Include="Assets\Rdeci_kriz\skripte\quiz_pp.cs" />
     <Compile Include="Assets\Registracija\Skripte\HSController.cs" />
@@ -101,9 +109,20 @@
     <Compile Include="Assets\level2\Skripte\CollisionLvl2.cs" />
     <Compile Include="Assets\level3\carparkedchechek3rdlevel\carparkchecked3.cs" />
     <Compile Include="Assets\level3\collisionlvl3\colisionlevel3.cs" />
+    <Compile Include="Assets\level4\Scripts\Collision.cs" />
+    <Compile Include="Assets\level4\Scripts\Collision1.cs" />
+    <Compile Include="Assets\level4\Scripts\Desni_avto_premik.cs" />
+    <Compile Include="Assets\level4\Scripts\Levi_avto_premik.cs" />
+    <Compile Include="Assets\level4\Scripts\Naredil.cs" />
+    <Compile Include="Assets\level4\Scripts\SkrijNapis.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
+    <None Include="Assets\Standard Assets\Environment\Water (Basic)\Shaders\FXWaterBasic.shader" />
+    <None Include="Assets\Standard Assets\Environment\Water\Water\Shaders\FXWaterPro.shader" />
+    <None Include="Assets\Standard Assets\Environment\Water\Water4\Shaders\FXWater4Advanced.shader" />
+    <None Include="Assets\Standard Assets\Environment\Water\Water4\Shaders\FXWater4Simple.shader" />
+    <None Include="Assets\Standard Assets\Environment\Water\Water4\Shaders\WaterInclude.cginc" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2015\UnityVS.CSharp.targets" />
 </Project>
