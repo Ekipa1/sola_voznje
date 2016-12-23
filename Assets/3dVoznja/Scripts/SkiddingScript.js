@@ -4,6 +4,7 @@ var skidAt : float = 0.5;
 var soundEmition : float = 15;
 private var soundWait : float;
 var skidSound : GameObject;
+var skidSmoke : GameObject;
 var smokeDepth : float = 0.4;
 var markWidth : float = 0.2;
 var rearWheel : boolean;
@@ -12,20 +13,25 @@ private var lastPos = new Vector3[2];
 var skidMaterial : Material;
 
 function Start () {
+	skidSmoke.transform.position = transform.position;
+	skidSmoke.transform.position.y -= smokeDepth;
 }
  
 function Update () {
 	var hit : WheelHit;
 	transform.GetComponent(WheelCollider).GetGroundHit(hit);
 	currentFrictionValue = Mathf.Abs(hit.sidewaysSlip);
-	if (skidAt <= currentFrictionValue && soundWait <= 0){
+	var rpm = transform.GetComponent(WheelCollider).rpm;
+	if (skidAt <= currentFrictionValue && soundWait <= 0 || rpm < 300 && Input.GetAxis("Vertical")>0 && soundWait <= 0 && rearWheel && hit.collider){
 		Instantiate(skidSound,hit.point,Quaternion.identity);
 		soundWait = 1;
 	}
 	soundWait -= Time.deltaTime*soundEmition;
-	if (skidAt <= currentFrictionValue){
+	if (skidAt <= currentFrictionValue || rpm < 300 && Input.GetAxis("Vertical")>0 && rearWheel && hit.collider){
+		skidSmoke.GetComponent.<ParticleEmitter>().emit = true;
 		SkidMesh();
 	}else{
+		skidSmoke.GetComponent.<ParticleEmitter>().emit = false;
 		skidding = 0;
 	}
 }
@@ -58,10 +64,13 @@ function SkidMesh(){
 	markMesh.vertices = vertices;
 	markMesh.triangles = triangles;
 	markMesh.RecalculateNormals();
-	var uvm = new Vector2[markMesh.vertices.length];
-	for(var i = 0; i < uvm.length; i++){
-		uvm[i] = Vector2(markMesh.vertices[i].x, markMesh.vertices[i].z);
-	}
+	var uvm: Vector2[] = new Vector2[4];
+	uvm[0] = Vector2(1,0);
+	uvm[1] = Vector2(0,0);
+	uvm[2] = Vector2(0,1);
+	uvm[3] = Vector2(1,1);
 	markMesh.uv = uvm;
 	filter.mesh = markMesh;
+	mark.GetComponent.<Renderer>().material = skidMaterial;
+	mark.AddComponent(DestroyTimerScript);
 }

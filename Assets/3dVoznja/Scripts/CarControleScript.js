@@ -1,5 +1,4 @@
 ﻿#pragma strict
-var centerOfMass : Vector3;
 var wheelFL : WheelCollider;//premikanje avta
 var wheelFR : WheelCollider;
 var wheelRL : WheelCollider;
@@ -26,10 +25,12 @@ private var mySidewayFriction : float;
 private var myForwardFriction : float;
 private var slipSidewayFriction : float;
 private var slipForwardFriction : float;
+var speedOMeterDial : Texture2D;
+var speedOMeterPointer : Texture2D;
+var spark : GameObject;
 
 var gearRatio : int[];
 function Start () {
-	//GetComponent.<Rigidbody>().centerOfMass=centerOfMass;
 	GetComponent.<Rigidbody>().centerOfMass.y=-0.9;
 	GetComponent.<Rigidbody>().centerOfMass.z=0.5;
 	SetValues();
@@ -207,4 +208,23 @@ function EngineSound(){
 	var enginePitch : float = ((currentSpeed - gearMinValue)/(gearMaxValue - gearMinValue))+1;
 	GetComponent.<AudioSource>().pitch = enginePitch;
 	//GetComponent.<AudioSource>().pitch = currentSpeed/topSpeed+0.05;
+}
+function OnGUI (){
+	GUI.DrawTexture(Rect(Screen.width - 300,Screen.height-150,300,150),speedOMeterDial);
+	var speedFactor : float = currentSpeed / topSpeed;
+	var rotationAngle : float;
+	if (currentSpeed >= 0){
+	  rotationAngle = Mathf.Lerp(0,180,speedFactor);
+	}else {
+	  rotationAngle = Mathf.Lerp(0,180,-speedFactor);  
+	}
+	GUIUtility.RotateAroundPivot(rotationAngle,Vector2(Screen.width-150,Screen.height));
+	GUI.DrawTexture(Rect(Screen.width - 300,Screen.height-150,300,300),speedOMeterPointer);
+}
+function OnCollisionEnter (other : Collision){
+	if(other.transform != transform && other.contacts.length != 0){
+		for(var i = 0; i < other.contacts.length; i++){
+			Instantiate(spark, other.contacts[i].point,Quaternion.identity);
+		}
+	}
 }
