@@ -93,6 +93,22 @@
     <Compile Include="Assets\Minigame1\Scripts\Sekunde.cs" />
     <Compile Include="Assets\Minigame1\Scripts\SkrijNavodila.cs" />
     <Compile Include="Assets\Minigame1\Scripts\SpawnScript.cs" />
+    <Compile Include="Assets\Minigame2\Kamera.cs" />
+    <Compile Include="Assets\Minigame2\Konec.cs" />
+    <Compile Include="Assets\Minigame2\naprej.cs" />
+    <Compile Include="Assets\Minigame2\premikaj.cs" />
+    <Compile Include="Assets\Minigame2\znova.cs" />
+    <Compile Include="Assets\Minigame3\Avto.cs" />
+    <Compile Include="Assets\Minigame3\Proga.cs" />
+    <Compile Include="Assets\Minigame3\puscice.cs" />
+    <Compile Include="Assets\Minigame3\start.cs" />
+    <Compile Include="Assets\Minigame3\znova1.cs" />
+    <Compile Include="Assets\Pedestrian System\Scripts\PedestrianNode.cs" />
+    <Compile Include="Assets\Pedestrian System\Scripts\PedestrianObject.cs" />
+    <Compile Include="Assets\Pedestrian System\Scripts\PedestrianObjectSpawner.cs" />
+    <Compile Include="Assets\Pedestrian System\Scripts\PedestrianSystem.cs" />
+    <Compile Include="Assets\Pedestrian System\Scripts\PedestrianVehicleCheckTrigger.cs" />
+    <Compile Include="Assets\Pedestrian System\Scripts\ToolTip.cs" />
     <Compile Include="Assets\Poskusi znova\Poskusi_script.cs" />
     <Compile Include="Assets\Rdeci_kriz\skripte\Question_.cs" />
     <Compile Include="Assets\Rdeci_kriz\skripte\quiz_pp.cs" />
@@ -115,8 +131,13 @@
     <Compile Include="Assets\level4\Scripts\Levi_avto_premik.cs" />
     <Compile Include="Assets\level4\Scripts\Naredil.cs" />
     <Compile Include="Assets\level4\Scripts\SkrijNapis.cs" />
+    <Compile Include="Assets\trafficmanager.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\Pedestrian System\Docs\Instructions.txt" />
+    <None Include="Assets\Standard Assets\Characters\FirstPersonCharacter\FirstPersonCharacterGuidelines.txt" />
+    <None Include="Assets\Standard Assets\Characters\RollerBall\RollerBallGuidelines.txt" />
+    <None Include="Assets\Standard Assets\Characters\ThirdPersonCharacter\ThirdPersonCharacterGuidelines.txt" />
     <None Include="Assets\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
     <None Include="Assets\Standard Assets\Environment\Water (Basic)\Shaders\FXWaterBasic.shader" />
     <None Include="Assets\Standard Assets\Environment\Water\Water\Shaders\FXWaterPro.shader" />
