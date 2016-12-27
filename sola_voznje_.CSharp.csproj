@@ -143,6 +143,7 @@
     <Compile Include="Assets\trafficmanager.cs" />
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <None Include="Assets\EasyRoads3D Free\Release Notes.txt" />
     <None Include="Assets\EasyRoads3D Free\Shaders\EasyRoads3D Marker.shader" />
     <None Include="Assets\EasyRoads3D Free\Shaders\EasyRoads3D-Alpha-BumpSpec.shader" />
@@ -158,6 +159,8 @@
     <None Include="Assets\EasyRoads3D Free\Shaders\surfaceAlpha.shader" />
     <None Include="Assets\EasyRoads3D Free\_Readme.txt" />
     <None Include="Assets\EasyRoads3D Free\_readme 1.txt" />
+=======
+>>>>>>> origin/master
     <None Include="Assets\Pedestrian System\Docs\Instructions.txt" />
     <None Include="Assets\Standard Assets\Characters\FirstPersonCharacter\FirstPersonCharacterGuidelines.txt" />
     <None Include="Assets\Standard Assets\Characters\RollerBall\RollerBallGuidelines.txt" />
