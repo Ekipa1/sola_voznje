@@ -45,6 +45,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Assets\Scripts\MovementControl.cs" />
      <Compile Include="Assets\Button_naprej.cs" />
      <Compile Include="Assets\CPP\Skripte\GameManager.cs" />
      <Compile Include="Assets\CPP\Skripte\Question.cs" />
@@ -60,6 +61,22 @@
      <Compile Include="Assets\Minigame1\Scripts\Sekunde.cs" />
      <Compile Include="Assets\Minigame1\Scripts\SkrijNavodila.cs" />
      <Compile Include="Assets\Minigame1\Scripts\SpawnScript.cs" />
+     <Compile Include="Assets\Minigame2\Kamera.cs" />
+     <Compile Include="Assets\Minigame2\Konec.cs" />
+     <Compile Include="Assets\Minigame2\naprej.cs" />
+     <Compile Include="Assets\Minigame2\premikaj.cs" />
+     <Compile Include="Assets\Minigame2\znova.cs" />
+     <Compile Include="Assets\Minigame3\Avto.cs" />
+     <Compile Include="Assets\Minigame3\Proga.cs" />
+     <Compile Include="Assets\Minigame3\puscice.cs" />
+     <Compile Include="Assets\Minigame3\start.cs" />
+     <Compile Include="Assets\Minigame3\znova1.cs" />
+     <Compile Include="Assets\Pedestrian System\Scripts\PedestrianNode.cs" />
+     <Compile Include="Assets\Pedestrian System\Scripts\PedestrianObject.cs" />
+     <Compile Include="Assets\Pedestrian System\Scripts\PedestrianObjectSpawner.cs" />
+     <Compile Include="Assets\Pedestrian System\Scripts\PedestrianSystem.cs" />
+     <Compile Include="Assets\Pedestrian System\Scripts\PedestrianVehicleCheckTrigger.cs" />
+     <Compile Include="Assets\Pedestrian System\Scripts\ToolTip.cs" />
      <Compile Include="Assets\Poskusi znova\Poskusi_script.cs" />
      <Compile Include="Assets\Rdeci_kriz\skripte\Question_.cs" />
      <Compile Include="Assets\Rdeci_kriz\skripte\quiz_pp.cs" />
@@ -82,12 +99,21 @@
      <Compile Include="Assets\level4\Scripts\Levi_avto_premik.cs" />
      <Compile Include="Assets\level4\Scripts\Naredil.cs" />
      <Compile Include="Assets\level4\Scripts\SkrijNapis.cs" />
+     <Compile Include="Assets\moving.cs" />
+     <Compile Include="Assets\trafficmanager.cs" />
+     <None Include="Assets\Rune Assets\Simple\Urban Buildings Pack 1\runesimple.shader" />
+     <None Include="Assets\Pedestrian System\Docs\Instructions.txt" />
      <None Include="Assets\Standard Assets\Environment\Water\Water4\Shaders\FXWater4Simple.shader" />
+     <None Include="Assets\BodyGuards\ReadMe.txt.txt" />
      <None Include="Assets\Standard Assets\Environment\Water (Basic)\Shaders\FXWaterBasic.shader" />
      <None Include="Assets\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
      <None Include="Assets\Standard Assets\Environment\Water\Water\Shaders\FXWaterPro.shader" />
+     <None Include="Assets\Standard Assets\Characters\ThirdPersonCharacter\ThirdPersonCharacterGuidelines.txt" />
+     <None Include="Assets\Horse\SoftAlpha.shader" />
+     <None Include="Assets\Standard Assets\Characters\FirstPersonCharacter\FirstPersonCharacterGuidelines.txt" />
      <None Include="Assets\Standard Assets\Environment\Water\Water4\Shaders\WaterInclude.cginc" />
      <None Include="Assets\Standard Assets\Environment\Water\Water4\Shaders\FXWater4Advanced.shader" />
+     <None Include="Assets\Standard Assets\Characters\RollerBall\RollerBallGuidelines.txt" />
  <Reference Include="UnityEngine.Networking">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
  </Reference>
