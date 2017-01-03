@@ -41,18 +41,19 @@ public class Check1 : MonoBehaviour {
         }
         else
         {
-			write ();
+			//write ();
+			PlayerPrefs.SetString("Name", mail.text);
             SceneManager.LoadScene("Start");
         
         }
 
     }
-	void write(){
+	/*void write(){
 		//Demonstrates how to create and write to a text file.
 		StreamWriter writer = new StreamWriter("data.txt");
 		writer.WriteLine(mail.text);
 		writer.Close();
-	}
+	}*/
 
 	public void naloziReg(){
 		SceneManager.LoadScene("Registracija");

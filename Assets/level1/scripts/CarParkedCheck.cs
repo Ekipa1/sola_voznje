@@ -30,8 +30,31 @@ public class CarParkedCheck : MonoBehaviour {
         //This is a coroutine
         // SceneManager.LoadScene("Cestitamo");
 
+		StartCoroutine (setScore ());
         yield return new WaitForSeconds(1);
         SceneManager.LoadScene("Cestitamo");
         //DoSomethingElse();
     }
+	IEnumerator setScore()
+	{
+		//This connects to a server side php script that will add the name and score to a MySQL DB.
+		// Supply it with a string representing the players name and the players score.
+		//string hash = MD5Test.Md5Sum(name + score + secretKey);
+		//read();
+		//string email = "colic@gmail.com";
+		string setScoreURL = "http://31.15.251.14/sola_voznje/set_score_level.php?";
+		string post_url = setScoreURL + "email=" + PlayerPrefs.GetString("Name");
+
+		var hs_post = new WWW (post_url);
+		yield return hs_post; // Wait until the download is done
+
+		if (hs_post.error != null) {
+			print ("Napaka v pošiljanju podatkov: " + hs_post.error);
+		}  /*else {
+			//Debug.Log ("POSLANO!");
+			scoreText.text ="Tockeeee: " + hs_post.text;
+			//SceneManager.LoadScene ("Menu");
+		}*/
+
+	}
 }

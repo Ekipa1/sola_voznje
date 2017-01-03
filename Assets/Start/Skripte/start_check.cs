@@ -10,14 +10,21 @@ public class start_check : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		//write ();
-		read ();
+		//read ();
+		if(PlayerPrefs.HasKey("Name")){
+			// there is a saved level, load that one
+			SceneManager.LoadScene ("Menu");
+		}else{
+			// no saved level, load the first one
+			SceneManager.LoadScene ("Login");
+		}
 	}
 	
 	// Update is called once per frame
 	void Update () {
 	
 	}
-	void write(){
+	/*void write(){
 		//Demonstrates how to create and write to a text file.
 		StreamWriter writer = new StreamWriter("data.txt");
 		writer.WriteLine("");
@@ -41,5 +48,5 @@ public class start_check : MonoBehaviour {
 		} else {
 			SceneManager.LoadScene ("Login");
 		}
-	}
+	}*/
 }

@@ -7,12 +7,38 @@ using UnityEngine.SceneManagement;//
 using System.IO;
 
 public class Menu_script : MonoBehaviour {
-	[SerializeField]
+	/*[SerializeField]
 	public Button btnCpp;
-	public Color btnColor;
+	public Color btnBlueColor;
+	public Button btnPp;
+	public Color btnRedColor;
+	public Button btnIgre;
 	void Start()
 	{
-
+		if (PlayerPrefs.HasKey ("CPP") && PlayerPrefs.HasKey ("PP")) {
+			btnCpp.interactable = false;
+			btnCpp.image.color = btnRedColor;
+			btnPp.interactable = false;
+			btnPp.image.color = btnRedColor;
+			btnIgre.interactable = true;
+			btnIgre.image.color = btnBlueColor;
+			if (!PlayerPrefs.HasKey ("Igre")) {
+				PlayerPrefs.SetInt("Igre", 1);
+			}
+		}else{
+			if (PlayerPrefs.HasKey ("PP")) {
+				btnCpp.interactable = true;
+				btnCpp.image.color = btnBlueColor;
+				btnPp.interactable = false;
+				btnPp.image.color = btnRedColor;
+			}
+			if (PlayerPrefs.HasKey ("CPP")) {
+				btnCpp.interactable = false;
+				btnCpp.image.color = btnRedColor;
+				btnPp.interactable = false;
+				btnPp.image.color = btnRedColor;
+			}
+		}
 	}
 	void OnEnable()
 	{
@@ -34,14 +60,8 @@ public class Menu_script : MonoBehaviour {
 			GlobalVariables.opravilPP = false;
 			//btntext.text = "dada";
 		}
-	}
+	}*/
 	public void ChangeScene (string sceneName){
 		SceneManager.LoadScene(sceneName);
-	}
-	public void izpis(){
-		StreamWriter writer = new StreamWriter("data.txt");
-		writer.WriteLine("");
-		writer.Close();
-		SceneManager.LoadScene("Login");
 	}
 }

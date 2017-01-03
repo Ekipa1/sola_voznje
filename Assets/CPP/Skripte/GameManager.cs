@@ -74,7 +74,9 @@ public class GameManager : MonoBehaviour {
 			StartCoroutine (getScore ());
 			StartCoroutine (newQuestion ());
 		} else {
-			GlobalVariables.opravilCPP = true;
+			//GlobalVariables.opravilCPP = true;
+			GlobalVariables.stVprasanjaCPP=0;
+			PlayerPrefs.SetInt("CPP", 1);
 			SceneManager.LoadScene ("Menu");
 		}
 		//Debug.Log (currentQuestion.question + " is " + currentQuestion.isTrue); //izpis v konzoli
@@ -146,9 +148,9 @@ public class GameManager : MonoBehaviour {
 		// Supply it with a string representing the players name and the players score.
 		//string hash = MD5Test.Md5Sum(name + score + secretKey);
 		//string email = "colic@gmail.com";
-		read();
+		//read();
 		string getScoreURL = "http://31.15.251.14/sola_voznje/get_score.php?";
-		string post_url = getScoreURL + "email=" + user;
+		string post_url = getScoreURL + "email=" + PlayerPrefs.GetString("Name");
 
 		var hs_post = new WWW (post_url);
 		yield return hs_post; // Wait until the download is done
@@ -168,10 +170,10 @@ public class GameManager : MonoBehaviour {
 		//This connects to a server side php script that will add the name and score to a MySQL DB.
 		// Supply it with a string representing the players name and the players score.
 		//string hash = MD5Test.Md5Sum(name + score + secretKey);
-		read();
+		//read();
 		//string email = "colic@gmail.com";
 		string setScoreURL = "http://31.15.251.14/sola_voznje/set_score.php?";
-		string post_url = setScoreURL + "email=" + user;
+		string post_url = setScoreURL + "email=" + PlayerPrefs.GetString("Name");
 
 		var hs_post = new WWW (post_url);
 		yield return hs_post; // Wait until the download is done
@@ -193,11 +195,11 @@ public class GameManager : MonoBehaviour {
 		//This connects to a server side php script that will add the name and score to a MySQL DB.
 		// Supply it with a string representing the players name and the players score.
 		//string hash = MD5Test.Md5Sum(name + score + secretKey);
-		read();
+		//read();
 		string kviz="CPP";
 		//string user = "colic@gmail.com";
 		string dobiVprasanje = "http://31.15.251.14/sola_voznje/question.php?";
-		string post_url = dobiVprasanje + "kviz=" + kviz + "&email=" + user;
+		string post_url = dobiVprasanje + "kviz=" + kviz + "&email=" + PlayerPrefs.GetString("Name");
 		string data;
 		var hs_post = new WWW (post_url);
 		yield return hs_post; // Wait until the download is done
@@ -276,7 +278,7 @@ public class GameManager : MonoBehaviour {
 		}
 
 	}
-	void read(){
+	/*void read(){
 		//How to read a text file.
 		//try...catch is to deal with a 0 byte file.
 		StreamReader reader = new StreamReader("data.txt");
@@ -289,7 +291,7 @@ public class GameManager : MonoBehaviour {
 		catch {
 		}
 		reader.Close ();
-	}
+	}*/
 
 
 }

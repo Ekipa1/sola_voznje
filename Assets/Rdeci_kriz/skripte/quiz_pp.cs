@@ -77,7 +77,9 @@ public class quiz_pp : MonoBehaviour {
 			StartCoroutine (getScore ());
 			StartCoroutine (newQuestion ());
 		} else {
-			GlobalVariables.opravilPP = true;
+			//GlobalVariables.opravilPP = true;
+			GlobalVariables.stVprasanjaPP=0;
+			PlayerPrefs.SetInt("PP", 1);
 			SceneManager.LoadScene ("Menu");
 		}
 
@@ -153,7 +155,7 @@ public class quiz_pp : MonoBehaviour {
         StartCoroutine(TransitionTonextQuestion());
     }*/
 
-    IEnumerator TransitionTonextQuestion()
+	IEnumerator TransitionToNextQuestion()
     {
         //neodgovorjeno.Remove(current_question);
 		//vprasanje_text.text="";
@@ -161,76 +163,27 @@ public class quiz_pp : MonoBehaviour {
 
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
-
-    public void pravilini() {
-
-        //string od1 = current_question.odgovor1.ToString();
-
+	public void UserSelectAnswer1(){
 		animator.SetTrigger ("Odg1");
-		if (odgovori_text.text == praviOdg)
-        {
-            //Debug.Log("CORRECT!");
+		if (odgovori_text.text == praviOdg) {
 			StartCoroutine (setScore ());
-        }
-
-        StartCoroutine(TransitionTonextQuestion());
-
-    }
-
-    public void pravilni2() {
+		}
+		StartCoroutine (TransitionToNextQuestion ());
+	}
+	public void UserSelectAnswer2(){
 		animator.SetTrigger ("Odg2");
-		if (odgovori_text2.text == praviOdg)
-		{
-			//Debug.Log("CORRECT!");
+		if (odgovori_text2.text == praviOdg) {
 			StartCoroutine (setScore ());
 		}
-
-		StartCoroutine(TransitionTonextQuestion());
-       /* if (current_question.odgovor2.ToString() == current_question.pravilniodgovor.ToString())
-        {
-            Debug.Log("CORRECT");
-        }
-        else
-        {
-            Debug.Log("WRONG!");
-        }*/
-
-        StartCoroutine(TransitionTonextQuestion());
-    }
-
-    public void pravilni3()
-	{
+		StartCoroutine (TransitionToNextQuestion ());
+	}
+	public void UserSelectAnswer3(){
 		animator.SetTrigger ("Odg3");
-		if (odgovori_text3.text == praviOdg)
-		{
-			//Debug.Log("CORRECT!");
+		if (odgovori_text3.text == praviOdg) {
 			StartCoroutine (setScore ());
 		}
-       /* if (current_question.odgovor3.ToString() == current_question.pravilniodgovor.ToString())
-        {
-            Debug.Log("CORRECT");
-        }
-        else
-        {
-            Debug.Log("WRONG!");
-        }*/
-
-        StartCoroutine(TransitionTonextQuestion());
-    }
-    
-
-
-
-    public void userSelectFirst()
-    {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
+		StartCoroutine (TransitionToNextQuestion ());
+	}
 
 	//baza
 	IEnumerator getScore()
@@ -239,9 +192,9 @@ public class quiz_pp : MonoBehaviour {
 		// Supply it with a string representing the players name and the players score.
 		//string hash = MD5Test.Md5Sum(name + score + secretKey);
 		//string email = "colic@gmail.com";
-		read();
+		//read();
 		string getScoreURL = "http://31.15.251.14/sola_voznje/get_score.php?";
-		string post_url = getScoreURL + "email=" + user;
+		string post_url = getScoreURL + "email=" + PlayerPrefs.GetString("Name");
 
 		var hs_post = new WWW (post_url);
 		yield return hs_post; // Wait until the download is done
@@ -261,10 +214,10 @@ public class quiz_pp : MonoBehaviour {
 		//This connects to a server side php script that will add the name and score to a MySQL DB.
 		// Supply it with a string representing the players name and the players score.
 		//string hash = MD5Test.Md5Sum(name + score + secretKey);
-		read();
+		//read();
 		//string email = "colic@gmail.com";
 		string setScoreURL = "http://31.15.251.14/sola_voznje/set_score.php?";
-		string post_url = setScoreURL + "email=" + user;
+		string post_url = setScoreURL + "email=" + PlayerPrefs.GetString("Name");
 
 		var hs_post = new WWW (post_url);
 		yield return hs_post; // Wait until the download is done
@@ -286,11 +239,11 @@ public class quiz_pp : MonoBehaviour {
 		//This connects to a server side php script that will add the name and score to a MySQL DB.
 		// Supply it with a string representing the players name and the players score.
 		//string hash = MD5Test.Md5Sum(name + score + secretKey);
-		read();
+		//read();
 		string kviz="PP";
 		//string user = "colic@gmail.com";
 		string dobiVprasanje = "http://31.15.251.14/sola_voznje/question.php?";
-		string post_url = dobiVprasanje + "kviz=" + kviz + "&email=" + user;
+		string post_url = dobiVprasanje + "kviz=" + kviz + "&email=" + PlayerPrefs.GetString("Name");
 		string data;
 		var hs_post = new WWW (post_url);
 		yield return hs_post; // Wait until the download is done
@@ -369,7 +322,7 @@ public class quiz_pp : MonoBehaviour {
 		}
 
 	}
-	void read(){
+	/*void read(){
 		//How to read a text file.
 		//try...catch is to deal with a 0 byte file.
 		StreamReader reader = new StreamReader("data.txt");
@@ -382,5 +335,5 @@ public class quiz_pp : MonoBehaviour {
 		catch {
 		}
 		reader.Close ();
-	}
+	}*/
 }

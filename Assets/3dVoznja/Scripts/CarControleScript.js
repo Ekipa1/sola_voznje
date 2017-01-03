@@ -27,7 +27,7 @@ private var slipSidewayFriction : float;
 private var slipForwardFriction : float;
 var speedOMeterDial : Texture2D;
 var speedOMeterPointer : Texture2D;
-var spark : GameObject;
+//var spark : GameObject;
 
 var gearRatio : int[];
 function Start () {
@@ -202,7 +202,9 @@ function EngineSound(){
 	if (i == 0){
 		gearMinValue = 0;
 	}else {
-		gearMinValue = gearRatio[i-1];
+		if(i>0 && i < gearRatio.length){
+			gearMinValue = gearRatio[i-1];
+		}
 	}
 	gearMaxValue = gearRatio[i];
 	var enginePitch : float = ((currentSpeed - gearMinValue)/(gearMaxValue - gearMinValue))+1;
@@ -221,10 +223,10 @@ function OnGUI (){
 	GUIUtility.RotateAroundPivot(rotationAngle,Vector2(Screen.width-150,Screen.height));
 	GUI.DrawTexture(Rect(Screen.width - 300,Screen.height-150,300,300),speedOMeterPointer);
 }
-function OnCollisionEnter (other : Collision){
+/*function OnCollisionEnter (other : Collision){
 	if(other.transform != transform && other.contacts.length != 0){
 		for(var i = 0; i < other.contacts.length; i++){
 			Instantiate(spark, other.contacts[i].point,Quaternion.identity);
 		}
 	}
-}
+}*/

@@ -53,6 +53,7 @@
      <Compile Include="Assets\Cestitamo\changeScene.cs" />
      <Compile Include="Assets\Login\scripts\Check1.cs" />
      <Compile Include="Assets\Menu\Skripte\GlobalVariables.cs" />
+     <Compile Include="Assets\Menu\Skripte\Menu_Script_2.cs" />
      <Compile Include="Assets\Menu\Skripte\Menu_script.cs" />
      <Compile Include="Assets\Minigame1\Scripts\Avto_premik.cs" />
      <Compile Include="Assets\Minigame1\Scripts\Premikaj_nasproti.cs" />
@@ -82,6 +83,7 @@
      <Compile Include="Assets\Rdeci_kriz\skripte\quiz_pp.cs" />
      <Compile Include="Assets\Registracija\Skripte\HSController.cs" />
      <Compile Include="Assets\Start\Skripte\start_check.cs" />
+     <Compile Include="Assets\Voznja\Skripta\Igre_Skript.cs" />
      <Compile Include="Assets\level1\Collision.cs" />
      <Compile Include="Assets\level1\button_ena.cs" />
      <Compile Include="Assets\level1\scripts\Car.cs" />
