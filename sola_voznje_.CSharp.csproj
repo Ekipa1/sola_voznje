@@ -87,14 +87,9 @@
     <Compile Include="Assets\CPP\Skripte\Question.cs" />
     <Compile Include="Assets\CPP\Skripte\Score.cs" />
     <Compile Include="Assets\Cestitamo\changeScene.cs" />
-    <Compile Include="Assets\EasyRoads3D Free\scripts\EasyRoads3DTerrainID.cs" />
-    <Compile Include="Assets\EasyRoads3D Free\scripts\MarkerScript.cs" />
-    <Compile Include="Assets\EasyRoads3D Free\scripts\RoadObjectScript.cs" />
-    <Compile Include="Assets\EasyRoads3D Free\scripts\SideObjectInit.cs" />
-    <Compile Include="Assets\EasyRoads3D Free\scripts\SurfaceScript.cs" />
-    <Compile Include="Assets\EasyRoads3D Free\scripts\sideObjectScript.cs" />
     <Compile Include="Assets\Login\scripts\Check1.cs" />
     <Compile Include="Assets\Menu\Skripte\GlobalVariables.cs" />
+    <Compile Include="Assets\Menu\Skripte\Menu_Script_2.cs" />
     <Compile Include="Assets\Menu\Skripte\Menu_script.cs" />
     <Compile Include="Assets\Minigame1\Scripts\Avto_premik.cs" />
     <Compile Include="Assets\Minigame1\Scripts\Premikaj_nasproti.cs" />
@@ -124,6 +119,8 @@
     <Compile Include="Assets\Rdeci_kriz\skripte\quiz_pp.cs" />
     <Compile Include="Assets\Registracija\Skripte\HSController.cs" />
     <Compile Include="Assets\Start\Skripte\start_check.cs" />
+    <Compile Include="Assets\Voznja\Skripta\Igre_Skript.cs" />
+    <Compile Include="Assets\drivetruck.cs" />
     <Compile Include="Assets\level1\Collision.cs" />
     <Compile Include="Assets\level1\button_ena.cs" />
     <Compile Include="Assets\level1\scripts\Car.cs" />
@@ -141,7 +138,6 @@
     <Compile Include="Assets\level4\Scripts\Levi_avto_premik.cs" />
     <Compile Include="Assets\level4\Scripts\Naredil.cs" />
     <Compile Include="Assets\level4\Scripts\SkrijNapis.cs" />
-<<<<<<< HEAD
     <Compile Include="Assets\moving.cs" />
     <Compile Include="Assets\trafficmanager.cs" />
   </ItemGroup>
@@ -150,30 +146,6 @@
     <None Include="Assets\Horse\SoftAlpha.shader" />
     <None Include="Assets\Pedestrian System\Docs\Instructions.txt" />
     <None Include="Assets\Rune Assets\Simple\Urban Buildings Pack 1\runesimple.shader" />
-=======
-    <Compile Include="Assets\trafficmanager.cs" />
-  </ItemGroup>
-  <ItemGroup>
-<<<<<<< HEAD
-    <None Include="Assets\EasyRoads3D Free\Release Notes.txt" />
-    <None Include="Assets\EasyRoads3D Free\Shaders\EasyRoads3D Marker.shader" />
-    <None Include="Assets\EasyRoads3D Free\Shaders\EasyRoads3D-Alpha-BumpSpec.shader" />
-    <None Include="Assets\EasyRoads3D Free\Shaders\EasyRoads3D-Alpha-Bumped.shader" />
-    <None Include="Assets\EasyRoads3D Free\Shaders\EasyRoads3D-Alpha-Diffuse.shader" />
-    <None Include="Assets\EasyRoads3D Free\Shaders\EasyRoads3D-Normal-BumpSpec.shader" />
-    <None Include="Assets\EasyRoads3D Free\Shaders\EasyRoads3D-Normal-Bumped.shader" />
-    <None Include="Assets\EasyRoads3D Free\Shaders\EasyRoads3D-Normal-Diffuse.shader" />
-    <None Include="Assets\EasyRoads3D Free\Shaders\EasyRoads3D-Road-Edit-Mode.shader" />
-    <None Include="Assets\EasyRoads3D Free\Shaders\EasyRoads3D-Surface.shader" />
-    <None Include="Assets\EasyRoads3D Free\Shaders\EasyRoads3D-Surface_Alpha.shader" />
-    <None Include="Assets\EasyRoads3D Free\Shaders\Surface.shader" />
-    <None Include="Assets\EasyRoads3D Free\Shaders\surfaceAlpha.shader" />
-    <None Include="Assets\EasyRoads3D Free\_Readme.txt" />
-    <None Include="Assets\EasyRoads3D Free\_readme 1.txt" />
-=======
->>>>>>> origin/master
-    <None Include="Assets\Pedestrian System\Docs\Instructions.txt" />
->>>>>>> origin/master
     <None Include="Assets\Standard Assets\Characters\FirstPersonCharacter\FirstPersonCharacterGuidelines.txt" />
     <None Include="Assets\Standard Assets\Characters\RollerBall\RollerBallGuidelines.txt" />
     <None Include="Assets\Standard Assets\Characters\ThirdPersonCharacter\ThirdPersonCharacterGuidelines.txt" />

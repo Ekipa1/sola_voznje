@@ -1,12 +1,8 @@
 ﻿<Properties StartupItem="sola_voznje_.CSharp.Plugins.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Standard Assets\Characters\ThirdPersonCharacter\Scripts\ThirdPersonUserControl.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\drivetruck.cs">
     <Files>
-      <File FileName="Assets\Standard Assets\Characters\ThirdPersonCharacter\Scripts\ThirdPersonUserControl.cs" Line="1" Column="1" />
-<<<<<<< HEAD
-      <File FileName="Assets\moving.cs" Line="1" Column="1" />
-=======
->>>>>>> origin/master
+      <File FileName="Assets\drivetruck.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
